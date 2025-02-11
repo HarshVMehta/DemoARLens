@@ -15,9 +15,7 @@ import{
          session.applyLens(lenses[0]);
 
         let mediaStream = await navigator.mediaDevices.getUserMedia({
-            video: {
-                facingMode: 'environment'
-            }
+            video: true
         });
 
         const source = createMediaStreamSource(
