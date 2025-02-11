@@ -22,7 +22,8 @@ import{
 
         const source = createMediaStreamSource(
             mediaStream,{
-                cameraType: 'back'
+                Transform: Transform2D.MirrorX,
+                cameraType: 'front'
             }
         );
 
