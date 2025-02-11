@@ -15,13 +15,15 @@ import{
          session.applyLens(lenses[0]);
 
         let mediaStream = await navigator.mediaDevices.getUserMedia({
-            video: true
+            video: {
+                facingMode: 'environment'
+            }
         });
 
         const source = createMediaStreamSource(
             mediaStream,{
                 Transform: Transform2D.MirrorX,
-                cameraType: 'front'
+                cameraType: 'back'
             }
         );
 
